@@ -1,20 +1,28 @@
 import { Elysia, t } from "elysia";
 import reviews from "./reviews";
+import { createUser, getUser, getUsers } from "../repositories/users";
+
+enum UserType {
+  admin = "Admin",
+  customer = "Customer",
+}
 
 const userSchema = t.Object({
   id: t.Optional(t.Integer()),
+  type: t.Enum(UserType),
   username: t.String(),
   password: t.String(),
   email: t.String({ format: "email" }),
   contactNumber: t.String(),
+  isBlocked: t.Optional(t.Boolean()),
 });
 
 export const users = new Elysia({ prefix: "/users" })
-  .get("/", () => [{ test: "utrtrf" }])
-  .post("/", ({ body }) => body, {
+  .get("/", () => getUsers())
+  .post("/", ({ body }) => createUser(body), {
     body: userSchema,
   })
-  .get("/:id", () => {}, {
+  .get("/:id", ({ params: { id } }) => getUser(id), {
     params: t.Object({
       id: t.Number(),
     }),
@@ -36,6 +44,6 @@ export const users = new Elysia({ prefix: "/users" })
       id: t.Number(),
     }),
   })
-  .use(reviews)
+  .use(reviews);
 
 export default users;
