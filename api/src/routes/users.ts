@@ -1,6 +1,12 @@
 import { Elysia, t } from "elysia";
 import reviews from "./reviews";
-import { createUser, getUser, getUsers } from "../repositories/users";
+import {
+  createUser,
+  deleteUser,
+  getUser,
+  getUsers,
+  updateUser,
+} from "../repositories/users";
 
 enum UserType {
   admin = "Admin",
@@ -27,19 +33,19 @@ export const users = new Elysia({ prefix: "/users" })
       id: t.Number(),
     }),
   })
-  .put("/:id", (body) => body, {
+  .put("/:id", ({ params: { id }, body }) => updateUser(id, body), {
     body: userSchema,
     params: t.Object({
       id: t.Number(),
     }),
   })
-  .patch("/:id", (body) => body, {
+  .patch("/:id", ({ params: { id }, body }) => updateUser(id, body), {
     body: t.Partial(userSchema),
     params: t.Object({
       id: t.Number(),
     }),
   })
-  .delete("/:id", () => "hi", {
+  .delete("/:id", ({ params: { id } }) => deleteUser(id), {
     params: t.Object({
       id: t.Number(),
     }),
