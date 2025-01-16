@@ -1,8 +1,8 @@
 {
     "version": "6",
     "dialect": "sqlite",
-    "id": "3d7d5ede-fcf0-4199-b298-d9fd3fc19ebd",
-    "prevId": "d5adc93a-d499-471e-96c5-76fbcf5f6482",
+    "id": "11cf9493-3539-4953-8b6f-e42cb4e6222a",
+    "prevId": "3d7d5ede-fcf0-4199-b298-d9fd3fc19ebd",
     "tables": {
         "dishes": {
             "name": "dishes",
@@ -37,7 +37,7 @@
                 },
                 "price": {
                     "name": "price",
-                    "type": "numeric",
+                    "type": "integer",
                     "primaryKey": false,
                     "notNull": false,
                     "autoincrement": false
@@ -163,11 +163,7 @@
     "_meta": {
         "schemas": {},
         "tables": {},
-        "columns": {
-            "\"ratings\".\"userId\"": "\"ratings\".\"user_id\"",
-            "\"ratings\".\"dishId\"": "\"ratings\".\"dish_id\"",
-            "\"users\".\"isBlocked\"": "\"users\".\"is_blocked\""
-        }
+        "columns": {}
     },
     "internal": {
         "indexes": {}

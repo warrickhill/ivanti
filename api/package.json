@@ -1,18 +1,18 @@
 {
-  "name": "api",
-  "version": "1.0.50",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "create-migrations": "bunx drizzle-kit generate --dialect sqlite --schema ./src/repositories/schema.ts",
-    "run-migrations": "bun ./src/repositories/migrate.ts",
-    "run-seed": "bun ./src/repositories/seed.ts",
-    "dev": "bun run --watch src/index.ts"
-  },
-  "dependencies": {
-    "elysia": "latest"
-  },
-  "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "name": "api",
+    "version": "1.0.50",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "create-migrations": "bunx drizzle-kit generate --dialect sqlite --schema ./src/repositories/schema.ts",
+        "run-migrations": "bun ./src/repositories/migrate.ts",
+        "run-seed": "bun ./src/repositories/seed.ts",
+        "dev": "bun run --watch src/index.ts"
+    },
+    "dependencies": {
+        "elysia": "latest"
+    },
+    "devDependencies": {
+        "bun-types": "latest"
+    },
+    "module": "src/index.js"
 }
