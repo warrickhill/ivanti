@@ -15,10 +15,11 @@
 
 ## Solution details
 
-- Frontend will be a react SPA
-- Backend will be an express app, this will allow it to be deployed either as a docker container or as a lambda function.
-- DB will be sqlite.
+- Frontend will be a react SPA.
+- Backend will be an Elysia app, this will allow it to be deployed either as a docker container or as a lambda function.
+- DB will be sqlite with Drizzle ORM as query engine.
 
 ### Notes
 
-- For development I am using bun. Why you ask? It's a drop in replacement for nodejs that has typescript support built in and as far as i can tell so far is faster than nodejs.
+- For development I am using bun. Why you ask? It's a drop in replacement for nodejs that has typescript support built in and as far as I can tell so far is faster than nodejs.
+- Using yarn or npm will still work even though I have been using bun.

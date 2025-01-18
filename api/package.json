@@ -1,18 +1,21 @@
 {
     "name": "api",
     "version": "1.0.50",
+    "module": "src/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "create-migrations": "bunx drizzle-kit generate --dialect sqlite --schema ./src/repositories/schema.ts",
+        "dev": "bun run --watch src/index.ts",
         "run-migrations": "bun ./src/repositories/migrate.ts",
         "run-seed": "bun ./src/repositories/seed.ts",
-        "dev": "bun run --watch src/index.ts"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
+        "@elysiajs/swagger": "^1.2.0",
+        "drizzle-orm": "^0.38.3",
         "elysia": "latest"
     },
     "devDependencies": {
-        "bun-types": "latest"
-    },
-    "module": "src/index.js"
+        "bun-types": "latest",
+        "drizzle-kit": "^0.30.1"
+    }
 }

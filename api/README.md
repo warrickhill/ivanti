@@ -1,19 +1,23 @@
-# Elysia with Bun runtime
+# API
 
-## Getting Started
-
-To get started with this template, simply paste this command into your terminal:
-
-```bash
-bun create elysia ./elysia-example
-```
-
-## Development
+## Running
 
 To start the development server run:
 
 ```bash
+bun install
 bun run dev
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+or
+
+```bash
+yarn install
+yarn dev
+```
+
+## Swagger
+
+Elysia swagger plugin is enabled
+
+Open http://localhost:3000/swagger with your browser to see the swagger docs.

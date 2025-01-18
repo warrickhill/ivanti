@@ -3,12 +3,10 @@
         "format": "bun prettier . --write"
     },
     "dependencies": {
-        "@elysiajs/swagger": "^1.2.0",
-        "bun": "^1.1.43",
-        "drizzle-orm": "^0.38.3"
+        "bun": "^1.1.43"
     },
     "devDependencies": {
-        "drizzle-kit": "^0.30.1",
-        "prettier": "3.4.2"
+        "prettier": "3.4.2",
+        "prettier-plugin-packagejson": "^2.5.7"
     }
 }
