@@ -1,5 +1,4 @@
 import { drizzle } from "drizzle-orm/bun-sqlite"
-import { Database } from "bun:sqlite"
+import sqlite from "../../sqlite.db" with { "type": "sqlite" };
 
-const sqlite = new Database("sqlite.db")
-export const db = drizzle(sqlite)
+export const db = drizzle({client: sqlite})

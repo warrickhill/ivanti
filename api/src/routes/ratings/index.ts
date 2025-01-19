@@ -5,7 +5,7 @@ import {
     getRating,
     getRatings,
     updateRating,
-} from "../repositories/ratings"
+} from "../../repositories/ratings"
 
 const ratingSchema = t.Object({
     userId: t.Integer(),

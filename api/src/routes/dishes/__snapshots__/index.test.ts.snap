@@ -1,0 +1,12 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Elysia return an dish 1`] = `
+{
+  "description": "The name Chicken and Barbecue sauce with Rice says it all",
+  "id": 1,
+  "image": "https://fakeimg.pl/600x400",
+  "name": "Chicken and Barbecue sauce with Rice",
+  "price": 10.99,
+  "rating": 3,
+}
+`;

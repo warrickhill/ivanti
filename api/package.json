@@ -10,6 +10,8 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
+        "@elysiajs/eden": "^1.2.0",
+        "@elysiajs/jwt": "^1.2.0",
         "@elysiajs/swagger": "^1.2.0",
         "drizzle-orm": "^0.38.3",
         "elysia": "latest"

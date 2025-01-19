@@ -5,8 +5,8 @@ import {
     getUser,
     getUsers,
     updateUser,
-} from "../repositories/users"
-import { UserType } from "../types/UserType"
+} from "../../repositories/users"
+import { UserType } from "../../types/UserType"
 
 const userSchema = t.Object({
     id: t.Optional(t.Integer()),

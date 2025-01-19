@@ -5,7 +5,7 @@ import {
     getDish,
     getDishes,
     updateDish,
-} from "../repositories/dishes"
+} from "../../repositories/dishes"
 
 const dishSchema = t.Object({
     id: t.Optional(t.Integer()),

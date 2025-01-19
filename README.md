@@ -21,5 +21,6 @@
 
 ### Notes
 
-- For development I am using bun. Why you ask? It's a drop in replacement for nodejs that has typescript support built in and as far as I can tell so far is faster than nodejs.
+- For development I am using bun. What is bun? It's a drop in replacement for nodejs that has typescript support built in and as far as I can tell so far is faster than nodejs.
+- Why have I used bun? I wanted to learn something new, and test out bun and it's eco-system. This tech test seemed like a good way to do that.
 - Using yarn or npm will still work even though I have been using bun.
