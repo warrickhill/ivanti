@@ -16,6 +16,15 @@ export const getUser = async (id: number) => {
     return (await db.selectDistinct().from(users).where(eq(users.id, id)))[0]
 }
 
+export const getUserByUsername = async (username: string) => {
+    return (
+        await db
+            .selectDistinct()
+            .from(users)
+            .where(eq(users.username, username))
+    )[0]
+}
+
 export const updateUser = async (id: number, data: NewUser) => {
     return await db.update(users).set(data).where(eq(users.id, id)).returning()
 }

@@ -1,5 +1,4 @@
 import { Elysia, t } from "elysia"
-import ratings from "./ratings"
 import {
     createDish,
     deleteDish,

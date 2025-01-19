@@ -1,5 +1,4 @@
 import { Elysia, t } from "elysia"
-import ratings from "./ratings"
 import {
     createUser,
     deleteUser,
@@ -7,11 +6,7 @@ import {
     getUsers,
     updateUser,
 } from "../repositories/users"
-
-enum UserType {
-    admin = "Admin",
-    customer = "Customer",
-}
+import { UserType } from "../types/UserType"
 
 const userSchema = t.Object({
     id: t.Optional(t.Integer()),

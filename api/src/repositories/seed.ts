@@ -1,5 +1,6 @@
 import { db } from "./db"
 import * as schema from "./schema"
+import { UserType } from "../types/UserType"
 
 // Admin staff
 const adminStaff = []
@@ -9,7 +10,7 @@ for (let i = 1; i <= 6; i++) {
         email: `admin-${i}@dancingpony.pub`,
         password: Bun.password.hashSync("password"),
         contactNumber: `07${`${i}`.padStart(9, "0")}`,
-        type: "Admin",
+        type: UserType.admin,
         isBlocked: false,
     })
 }
@@ -23,7 +24,7 @@ for (let i = 1; i <= 2000; i++) {
         email: `customer-${i}@test.com`,
         password: Bun.password.hashSync("password"),
         contactNumber: `01280${`${i}`.padStart(6, "0")}`,
-        type: "Customer",
+        type: UserType.customer,
         isBlocked: i % 100 === 0 ? true : false,
     })
     if (i % 100 === 0) {
