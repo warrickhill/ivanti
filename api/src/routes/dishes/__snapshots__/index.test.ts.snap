@@ -1,6 +1,6 @@
 // Bun Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Elysia return an dish 1`] = `
+exports[`Dishes return an dish 1`] = `
 {
   "description": "The name Chicken and Barbecue sauce with Rice says it all",
   "id": 1,

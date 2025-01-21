@@ -16,7 +16,7 @@ export const getDishes = async () => {
 }
 
 export const createDish = async (user: NewDish) => {
-    return await db.insert(dishes).values(user).returning()
+    return (await db.insert(dishes).values(user).returning())[0]
 }
 
 export const getDish = async (id: number) => {
@@ -34,11 +34,9 @@ export const getDish = async (id: number) => {
 }
 
 export const updateDish = async (id: number, data: NewDish) => {
-    return await db
-        .update(dishes)
-        .set(data)
-        .where(eq(dishes.id, id))
-        .returning()
+    return (
+        await db.update(dishes).set(data).where(eq(dishes.id, id)).returning()
+    )[0]
 }
 
 export const deleteDish = async (id: number) => {
